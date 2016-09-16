@@ -10,8 +10,12 @@ int main()
 	int screenHeight = GetSystemMetrics(SM_CYSCREEN);
 	int startGaming = 0;
 
-	sf::RenderWindow window(sf::VideoMode(screenWidth / 2, screenHeight / 2), "Jungle Cup", sf::Style::Fullscreen);
-	
+	// Полный экран
+	//sf::RenderWindow window(sf::VideoMode(screenWidth / 2, screenHeight / 2), "Jungle Cup", sf::Style::Fullscreen);
+
+	// Запуск в окне
+	sf::RenderWindow window(sf::VideoMode(1000, 800), "Jungle Cup");
+
 	//	задний фон меню спрайт и текстура
 	
 	sf::Sprite spriteBackground;
