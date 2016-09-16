@@ -1,33 +1,56 @@
 #pragma once
+
 #include "animation.h"
+
 #include <SFML/Graphics.hpp>
 #include "objectgraphics.h"
-animation::~animation()
-{
-}
+
 animation::animation()
 {
 }
-animation::animation( objectGraphics spriteSheet[], int frameDelay, int numbersOfFrame, sf::RenderWindow &window)
+
+animation::~animation()
 {
-	i = 0;
-	Frames = numbersOfFrame;
-	local_window = &window;
-	for (i = 0; i < Frames; i++)
-	{
-		spriteSheet_local[i] = spriteSheet[i].getSprite();
-	}
 }
+
+animation::animation(objectGraphics* spriteSheet, int frameDelay, int numbersOfFrame, sf::RenderWindow* window)
+{
+	m_currentFrame = 0;
+	m_numberOfFrames = numbersOfFrame;
+	local_window = window;
+	for(int iFrameCounter = 0; iFrameCounter < m_numberOfFrames; iFrameCounter++)
+	{
+		spriteSheet_local[iFrameCounter] = spriteSheet[iFrameCounter].getSprite();
+	}
+	m_isPlaing = true;
+}
+
 void animation::play()
 {
-	while (i< Frames)
+	local_window->draw(spriteSheet_local[m_currentFrame]);
+	sf::sleep(sf::milliseconds(250));
+		
+	if (m_isPlaing)
 	{
-		local_window->draw(spriteSheet_local[i]);
-		i++;
-		sf::sleep(sf::milliseconds(25));
+		m_currentFrame++;
 	}
+	if (m_currentFrame == m_numberOfFrames) m_currentFrame = 0;
+
+	//if (m_currentFrame == m_numberOfFrames) m_currentFrame = 0;
+	//while (m_currentFrame < m_numberOfFrames)
+	//{
+	//	local_window->draw(spriteSheet_local[m_currentFrame]);
+	//	sf::sleep(sf::milliseconds(10000));
+	//	
+	//	if (m_isPlaing)
+	//	{
+	//		m_currentFrame++;
+	//	}
+	//}
 }
+
 void animation::stop()
 {
 	local_window->draw(spriteSheet_local[0]);
+	m_isPlaing = false;
 }

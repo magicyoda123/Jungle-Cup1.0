@@ -1,13 +1,2 @@
-﻿  objectgraphics.cpp
-c:\users\matthewpoletin\documents\projects\jungle-cup1.0\jungle cup\objectgraphics.cpp(13): warning C4244: аргумент: преобразование "double" в "float", возможна потеря данных
-c:\users\matthewpoletin\documents\projects\jungle-cup1.0\jungle cup\objectgraphics.cpp(14): warning C4244: аргумент: преобразование "int" в "float", возможна потеря данных
-c:\users\matthewpoletin\documents\projects\jungle-cup1.0\jungle cup\objectgraphics.cpp(17): warning C4244: =: преобразование "double" в "int", возможна потеря данных
-c:\users\matthewpoletin\documents\projects\jungle-cup1.0\jungle cup\objectgraphics.cpp(18): warning C4244: =: преобразование "double" в "int", возможна потеря данных
-  main.cpp
-  button.cpp
-  animation.cpp
-  Создание кода...
-c:\users\matthewpoletin\documents\projects\jungle-cup1.0\jungle cup\button.cpp(35): warning C4715: button::isPress: значение возвращается не при всех путях выполнения
-     Создается библиотека C:\Users\matthewpoletin\Documents\Projects\Jungle-Cup1.0\Bin\Debug\Jungle Cup.lib и объект C:\Users\matthewpoletin\Documents\Projects\Jungle-Cup1.0\Bin\Debug\Jungle Cup.exp
-sfml-main-d.lib(MainWin32.cpp.obj) : warning LNK4099: "vc140.pdb" PDB не найден с "sfml-main-d.lib(MainWin32.cpp.obj)" или на "C:\Users\matthewpoletin\Documents\Projects\Jungle-Cup1.0\Bin\Debug\vc140.pdb"; компоновка объекта выполняется как при отсутствии отладочных данных
+﻿  main.cpp
   Jungle Cup.vcxproj -> C:\Users\matthewpoletin\Documents\Projects\Jungle-Cup1.0\Bin\Debug\Jungle Cup.exe

@@ -1,8 +1,10 @@
 #pragma once
+
 #include <string>
 #include <SFML/Graphics.hpp>
 
-class objectGraphics {
+class objectGraphics
+{
 public: 
 		objectGraphics();
 		~objectGraphics();
@@ -13,8 +15,4 @@ public:
 		sf::Vector2i curResolution;
 		sf::Vector2i curPosition;
 		
-		
-		
-		
-
 };
