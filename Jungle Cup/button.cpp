@@ -1,17 +1,15 @@
-#include "objectgraphics.h"
+#include "sprite.h"
+
 #include <SFML/Graphics.hpp>
+
+#include "sprite.h"
 #include "button.h"
-#include "objectgraphics.h"
 
-button::~button()
-{
-
-}
 button::button()
 {
-
 }
-button::button(objectGraphics * buttonGraphics)
+
+button::button(sprite * buttonGraphics)
 {
 	Coord = buttonGraphics->curPosition;
 	frameX0 = Coord.x;
@@ -21,6 +19,11 @@ button::button(objectGraphics * buttonGraphics)
 	frameX1 = frameX0 + Coord.x;
 	frameY1 = frameY0 + Coord.y;
 }
+
+button::~button()
+{
+}
+
 bool button::isPress()
 {
 	if (sf::Mouse::isButtonPressed(sf::Mouse::Left)) // если левая клавиша мыши нажата

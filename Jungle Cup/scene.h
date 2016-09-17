@@ -1,6 +1,11 @@
-#include "objectgraphics.h"
+#pragma once
+
+#include "sprite.h"
+
 class scene
 {
-public: scene();
-		~scene();
+public:
+	scene();
+	~scene();
+
 };

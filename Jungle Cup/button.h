@@ -1,12 +1,17 @@
 #pragma once
+
 #include <SFML/Graphics.hpp>
-#include "objectgraphics.h"
-class button {
+
+#include "sprite.h"
+
+class button
+{
 	public: 
-			button();
-			~button();
-			button(objectGraphics *); // передаем объект графического класса, в нем уже содержиться разрешение картинки и масштаб
-			bool isPress();
+		button();
+		button(sprite *); // передаем объект графического класса, в нем уже содержиться разрешение картинки и масштаб
+		~button();
+	
+		bool isPress();
 			
 	private:
 		sf::Vector2i mousePosition; // позиция курсора мышки на экране

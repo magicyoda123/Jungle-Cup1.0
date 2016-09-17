@@ -1,19 +1,14 @@
-#pragma once
-
 #include "animation.h"
 
 #include <SFML/Graphics.hpp>
-#include "objectgraphics.h"
+
+#include "sprite.h"
 
 animation::animation()
 {
 }
 
-animation::~animation()
-{
-}
-
-animation::animation(objectGraphics* spriteSheet, int frameDelay, int numbersOfFrame, sf::RenderWindow* window)
+animation::animation(sprite* spriteSheet, int frameDelay, int numbersOfFrame, sf::RenderWindow* window)
 {
 	m_currentFrame = 0;
 	m_numberOfFrames = numbersOfFrame;
@@ -23,6 +18,11 @@ animation::animation(objectGraphics* spriteSheet, int frameDelay, int numbersOfF
 		spriteSheet_local[iFrameCounter] = spriteSheet[iFrameCounter].getSprite();
 	}
 	m_isPlaing = true;
+}
+
+animation::~animation()
+{
+	delete[] spriteSheet_local;
 }
 
 void animation::play()

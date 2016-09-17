@@ -1,14 +1,14 @@
 #pragma once
 
 #include <SFML/Graphics.hpp>
-#include "objectgraphics.h"
+#include "sprite.h"
 
 class animation
 {
 public: 
 	animation();
+	animation(sprite* spriteSheet, int frameDelay, int numbersOfFrame, sf::RenderWindow* window);
 	~animation();
-	animation(objectGraphics* spriteSheet, int frameDelay, int numbersOfFrame, sf::RenderWindow* window);
 
 	sf::RenderWindow* local_window;
 	sf::Sprite spriteSheet_local[10];

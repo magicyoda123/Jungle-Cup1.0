@@ -90,17 +90,13 @@
     <ClCompile Include="animation.cpp" />
     <ClCompile Include="button.cpp" />
     <ClCompile Include="main.cpp" />
-    <ClCompile Include="objectgraphics.cpp" />
+    <ClCompile Include="sprite.cpp" />
   </ItemGroup>
   <ItemGroup>
     <ClInclude Include="animation.h" />
     <ClInclude Include="button.h" />
-    <ClInclude Include="objectgraphics.h" />
-    <ClInclude Include="resource.h" />
+    <ClInclude Include="sprite.h" />
     <ClInclude Include="scene.h" />
-  </ItemGroup>
-  <ItemGroup>
-    <Image Include="newgame.jpg" />
   </ItemGroup>
   <Import Project="$(VCTargetsPath)\Microsoft.Cpp.targets" />
   <ImportGroup Label="ExtensionTargets">
