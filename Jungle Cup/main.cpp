@@ -4,6 +4,7 @@
 #include "sprite.h"
 #include "animation.h"
 #include "button.h"
+#include "hero.h"
 
 int main()
 {
@@ -29,9 +30,9 @@ int main()
 	sprite newGame("./Resources/sprites/newgame.png", 0, 0, 200, 50, 1, 1, screenWidth / 2, screenHeight / 2);
 	sprite level1("./Resources/sprites/Jungle-Level_site.png", 0, 0, 900, 473, 1.5, 1.5, 0, 0);
 
+	sprite animGiraffe1("./Resources/sprites/giraffe/frame1.png", 0, 0, 192, 260, 1, 1, 200, 200);
 	sprite animGiraffe2("./Resources/sprites/giraffe/frame2.png", 0, 0, 192, 260, 1, 1, 200, 200);
 	sprite animGiraffe3("./Resources/sprites/giraffe/frame3.png", 0, 0, 192, 260, 1, 1, 200, 200);
-	sprite animGiraffe1("./Resources/sprites/giraffe/frame1.png", 0, 0, 192, 260, 1, 1, 200, 200);
 	sprite animGiraffe4("./Resources/sprites/giraffe/frame4.png", 0, 0, 192, 260, 1, 1, 200, 200);
 	sprite anim_hero[] = {
 		animGiraffe1,
@@ -40,6 +41,7 @@ int main()
 		animGiraffe4
 	};
 	animation* pGiraffeAnimation = new animation(anim_hero, 25, sizeof(anim_hero) / sizeof(anim_hero[0]), &window);
+	hero* pHero = new hero(100, 80);
 
 	spriteBackground = background.getSprite();
 	spriteNewGame = newGame.getSprite();
@@ -70,6 +72,9 @@ int main()
 		case 1:
 			window.draw(spriteLevel1);
 			pGiraffeAnimation->play();
+			pHero->SetHP(pHero->GetHP() - 1);
+			window.draw(*(pHero->GetMaxHPSprite()));
+			window.draw(*(pHero->GetSprite()));
 			break;
 		default:
 			break;

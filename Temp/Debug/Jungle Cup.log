@@ -1,2 +1,7 @@
-﻿  main.cpp
+﻿  hero.cpp
+c:\users\matthewpoletin\documents\projects\jungle-cup1.0\jungle cup\hero.cpp(12): warning C4244: аргумент: преобразование "const int" в "float", возможна потеря данных
+c:\users\matthewpoletin\documents\projects\jungle-cup1.0\jungle cup\hero.cpp(12): warning C4244: аргумент: преобразование "int" в "float", возможна потеря данных
+c:\users\matthewpoletin\documents\projects\jungle-cup1.0\jungle cup\hero.cpp(16): warning C4244: аргумент: преобразование "const int" в "float", возможна потеря данных
+c:\users\matthewpoletin\documents\projects\jungle-cup1.0\jungle cup\hero.cpp(35): warning C4244: аргумент: преобразование "const int" в "float", возможна потеря данных
+c:\users\matthewpoletin\documents\projects\jungle-cup1.0\jungle cup\hero.cpp(35): warning C4244: аргумент: преобразование "int" в "float", возможна потеря данных
   Jungle Cup.vcxproj -> C:\Users\matthewpoletin\Documents\Projects\Jungle-Cup1.0\Bin\Debug\Jungle Cup.exe
