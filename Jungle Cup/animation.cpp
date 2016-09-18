@@ -54,3 +54,10 @@ void animation::stop()
 	local_window->draw(spriteSheet_local[0]);
 	m_isPlaing = false;
 }
+void animation::move(int x, int y)
+{
+	for (int i = 0; i <= m_numberOfFrames; i++)
+	{
+		spriteSheet_local[i].move(x, y);
+	}
+}

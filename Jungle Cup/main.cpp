@@ -56,6 +56,10 @@ int main()
 		{
 			if (sf::Keyboard::isKeyPressed(sf::Keyboard::Escape))
 				window.close();
+			if (sf::Keyboard::isKeyPressed(sf::Keyboard::D))
+			{
+				pGiraffeAnimation->move(screenWidth/100,0);
+			}
 		}
 	
 		if (buttonNewGame.isPress() == true)

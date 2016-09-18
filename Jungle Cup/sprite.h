@@ -16,5 +16,6 @@ public:
 	sf::Sprite curSprite;
 	sf::Vector2i curResolution;
 	sf::Vector2i curPosition;
+	void moveSprite(int x, int y);
 		
 };

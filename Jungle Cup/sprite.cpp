@@ -26,3 +26,7 @@ sf::Sprite sprite::getSprite()
 {
 	return curSprite;
 }
+void sprite::moveSprite(int x, int y)
+{
+	curSprite.move(x,y);
+}
