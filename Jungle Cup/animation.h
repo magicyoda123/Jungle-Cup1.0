@@ -15,6 +15,7 @@ public:
 	
 	void play();
 	void stop();
+	void move(int x, int y);
 
 private:
 	int m_currentFrame;

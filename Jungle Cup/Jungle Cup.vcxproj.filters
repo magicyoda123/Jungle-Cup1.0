@@ -11,5 +11,6 @@
     <ClInclude Include="button.h" />
     <ClInclude Include="scene.h" />
     <ClInclude Include="sprite.h" />
+    <ClInclude Include="character.h" />
   </ItemGroup>
 </Project>
